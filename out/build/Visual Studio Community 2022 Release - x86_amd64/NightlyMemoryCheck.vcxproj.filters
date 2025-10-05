@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\their\Documents\GitHub\Dear-IMGUI-Logging-System\out\build\Visual Studio Community 2022 Release - x86_amd64\CMakeFiles\988bed0bb93f9b954978cb00eb890dee\NightlyMemoryCheck.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\their\Documents\GitHub\Dear-IMGUI-Logging-System\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="C:\Users\their\Documents\GitHub\Dear-IMGUI-Logging-System\out\build\Visual Studio Community 2022 Release - x86_amd64\CMakeFiles\NightlyMemoryCheck" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{092E3CE1-CCB2-3C3F-99A4-33AA13753541}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

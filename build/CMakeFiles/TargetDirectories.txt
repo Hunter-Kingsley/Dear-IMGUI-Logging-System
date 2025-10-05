@@ -1,0 +1,9 @@
+C:/Users/their/Documents/GitHub/Dear-IMGUI-Logging-System/build/CMakeFiles/Experimental.dir
+C:/Users/their/Documents/GitHub/Dear-IMGUI-Logging-System/build/CMakeFiles/Nightly.dir
+C:/Users/their/Documents/GitHub/Dear-IMGUI-Logging-System/build/CMakeFiles/Continuous.dir
+C:/Users/their/Documents/GitHub/Dear-IMGUI-Logging-System/build/CMakeFiles/NightlyMemoryCheck.dir
+C:/Users/their/Documents/GitHub/Dear-IMGUI-Logging-System/build/CMakeFiles/demo.dir
+C:/Users/their/Documents/GitHub/Dear-IMGUI-Logging-System/build/CMakeFiles/PACKAGE.dir
+C:/Users/their/Documents/GitHub/Dear-IMGUI-Logging-System/build/CMakeFiles/RUN_TESTS.dir
+C:/Users/their/Documents/GitHub/Dear-IMGUI-Logging-System/build/CMakeFiles/ALL_BUILD.dir
+C:/Users/their/Documents/GitHub/Dear-IMGUI-Logging-System/build/CMakeFiles/ZERO_CHECK.dir

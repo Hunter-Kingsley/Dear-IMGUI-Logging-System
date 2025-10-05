@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\Users\their\Documents\GitHub\Dear-IMGUI-Logging-System\Application.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\their\Documents\GitHub\Dear-IMGUI-Logging-System\imgui\imgui_demo.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\their\Documents\GitHub\Dear-IMGUI-Logging-System\imgui\imgui_draw.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\their\Documents\GitHub\Dear-IMGUI-Logging-System\imgui\imgui_tables.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\their\Documents\GitHub\Dear-IMGUI-Logging-System\imgui\imgui_widgets.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\their\Documents\GitHub\Dear-IMGUI-Logging-System\imgui\imgui.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\their\Documents\GitHub\Dear-IMGUI-Logging-System\imgui\imgui_impl_dx11.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\their\Documents\GitHub\Dear-IMGUI-Logging-System\main_win32.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\their\Documents\GitHub\Dear-IMGUI-Logging-System\imgui\imgui_impl_win32.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\their\Documents\GitHub\Dear-IMGUI-Logging-System\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{60A6C904-92AD-3868-A1E0-5F994C99359A}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
