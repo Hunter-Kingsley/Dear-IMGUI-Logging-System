@@ -1,16 +1,18 @@
 #pragma once
-#include <string>
 
-enum class LOG_TYPE {
+#include <string>
+#include <time.h>
+
+enum class LOG_LEVEL {
     INFO,
     WARNING,
     ERROR
 };
 
-struct log
+struct log_info
 {
     std::string Time;
-    LOG_TYPE Log_Level;
+    LOG_LEVEL Log_Level;
     bool isGameEvent;
     std::string Message;
 };
@@ -31,4 +33,6 @@ class Logger {
         void LogError();
     private:
         Logger() {}
+        std::string GetTime();
+        void SendLog(log_info L);
 };
