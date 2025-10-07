@@ -1,4 +1,5 @@
 #include "Application.h"
+#include "Logger.h"
 #include "imgui/imgui.h"
 
 namespace ClassGame {
@@ -13,9 +14,9 @@ namespace ClassGame {
         void GameStartUp() 
         {
             // Initialize logging system
-//            Logger& logger = Logger::GetInstance();
-//            logger.LogInfo("Game started successfully");
-//            logger.LogGameEvent("Application initialized");
+           Logger& logger = Logger::GetInstance();
+        //    logger.LogInfo("Game started successfully");
+        //    logger.LogGameEvent("Application initialized");
         }
 
         //
