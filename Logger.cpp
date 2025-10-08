@@ -1,6 +1,7 @@
 #include "Logger.h"
 #include "imgui/imgui.h"
 #include <iostream>
+#include <chrono>
 
 Logger* Logger::s_instance = nullptr;
 
@@ -31,12 +32,26 @@ void Logger::RenderLogger() {
     ImGui::SameLine();
 
     if(ImGui::Button("Test Warning")) {
-        // TODO
+        log_info temp_log;
+        
+        temp_log.Time = Logger::GetTime();
+        temp_log.isGameEvent = false;
+        temp_log.Log_Level = LOG_LEVEL::WARNING;
+        temp_log.Message = "This is a test warning message";
+
+        log_bank.push_back(temp_log);
     }
     ImGui::SameLine();
 
     if(ImGui::Button("Test Error")) {
-        // TODO
+        log_info temp_log;
+        
+        temp_log.Time = Logger::GetTime();
+        temp_log.isGameEvent = false;
+        temp_log.Log_Level = LOG_LEVEL::ERROR;
+        temp_log.Message = "This is a test error message";
+
+        log_bank.push_back(temp_log);
     }
 
     ImGui::Separator();
@@ -49,9 +64,21 @@ void Logger::RenderLogger() {
 }
 
 std::string Logger::GetTime() {
-    time_t my_time = time(NULL);
+    using namespace std::chrono;
+    auto now = system_clock::now();
+    auto ms = duration_cast<milliseconds>(now.time_since_epoch()) % 1000;
+    std::time_t t = system_clock::to_time_t(now);
 
-    return "Time O'Clock";
+    std::tm buf;
+#if defined(_WIN32)
+    localtime_s(&buf, &t);
+#else
+    localtime_r(&t, &buf);
+#endif
+
+    std::ostringstream oss;
+    oss << std::put_time(&buf, "%H:%M:%S") << '.' << std::setfill('0') << std::setw(3) << ms.count();
+    return oss.str();
 }
 
 void Logger::PublishLogs() {
