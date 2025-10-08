@@ -11,10 +11,12 @@ void Logger::RenderLogger() {
     if(ImGui::Button("Options")) {
         // TODO
     }
+    ImGui::SameLine();
 
     if(ImGui::Button("Clear")) {
         // TODO
     }
+    ImGui::SameLine();
 
     if(ImGui::Button("Test Info")) {
         log_info temp_log;
@@ -26,14 +28,22 @@ void Logger::RenderLogger() {
 
         Logger::SendLog(temp_log);
     }
+    ImGui::SameLine();
 
     if(ImGui::Button("Test Warning")) {
         // TODO
     }
+    ImGui::SameLine();
 
     if(ImGui::Button("Test Error")) {
         // TODO
     }
+
+    ImGui::Separator();
+
+    ImGui::BeginChild("Log Area");
+    ImGui::TextUnformatted("logs go here");
+    ImGui::EndChild();
 
     ImGui::End();
 }
