@@ -63,6 +63,78 @@ void Logger::RenderLogger() {
     ImGui::End();
 }
 
+void Logger::LogInfo(std::string S) {
+
+    log_info temp_log;
+        
+    temp_log.Time = Logger::GetTime();
+    temp_log.isGameEvent = false;
+    temp_log.Log_Level = LOG_LEVEL::INFO;
+    temp_log.Message = S;
+
+    log_bank.push_back(temp_log);
+}
+
+void Logger::LogGameEvent(std::string S) {
+        
+    log_info temp_log;
+        
+    temp_log.Time = Logger::GetTime();
+    temp_log.isGameEvent = true;
+    temp_log.Log_Level = LOG_LEVEL::INFO;
+    temp_log.Message = S;
+
+    log_bank.push_back(temp_log);
+}
+
+void Logger::LogWarning(std::string S) {
+        
+    log_info temp_log;
+        
+    temp_log.Time = Logger::GetTime();
+    temp_log.isGameEvent = false;
+    temp_log.Log_Level = LOG_LEVEL::WARNING;
+    temp_log.Message = S;
+
+    log_bank.push_back(temp_log);
+}
+
+void Logger::LogGameWarning(std::string S) {
+        
+    log_info temp_log;
+        
+    temp_log.Time = Logger::GetTime();
+    temp_log.isGameEvent = true;
+    temp_log.Log_Level = LOG_LEVEL::WARNING;
+    temp_log.Message = S;
+
+    log_bank.push_back(temp_log);
+}
+
+void Logger::LogError(std::string S) {
+    
+    log_info temp_log;
+        
+    temp_log.Time = Logger::GetTime();
+    temp_log.isGameEvent = false;
+    temp_log.Log_Level = LOG_LEVEL::ERROR;
+    temp_log.Message = S;
+
+    log_bank.push_back(temp_log);
+}
+
+void Logger::LogGameError(std::string S) {
+    
+    log_info temp_log;
+        
+    temp_log.Time = Logger::GetTime();
+    temp_log.isGameEvent = true;
+    temp_log.Log_Level = LOG_LEVEL::ERROR;
+    temp_log.Message = S;
+
+    log_bank.push_back(temp_log);
+}
+
 std::string Logger::GetTime() {
     using namespace std::chrono;
     auto now = system_clock::now();

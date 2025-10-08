@@ -33,7 +33,9 @@ class Logger {
         void LogInfo(std::string);
         void LogGameEvent(std::string);
         void LogWarning(std::string);
+        void LogGameWarning(std::string);
         void LogError(std::string);
+        void LogGameError(std::string);
     private:
         static Logger* s_instance;
         Logger() {}

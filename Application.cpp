@@ -15,8 +15,12 @@ namespace ClassGame {
         {
             // Initialize logging system
            Logger& logger = Logger::GetInstance();
-        //    logger.LogInfo("Game started successfully");
-        //    logger.LogGameEvent("Application initialized");
+           logger.LogInfo("Game started successfully");
+           logger.LogGameEvent("Application initialized");
+
+           logger.LogGameEvent("Player made a move");
+           logger.LogGameWarning("Invalid move attempted");
+           logger.LogGameError("Game state corrupted");
         }
 
         //
