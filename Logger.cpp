@@ -1,8 +1,10 @@
 #include "Logger.h"
 #include "imgui/imgui.h"
+#include <iostream>
+
+Logger* Logger::s_instance = nullptr;
 
 void Logger::RenderLogger() {
-    printf("I AM STRAIGHT UP RENDERING IT");
 
     ImGui::Begin("Game Log");
 

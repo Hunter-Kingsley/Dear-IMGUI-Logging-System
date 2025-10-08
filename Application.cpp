@@ -25,9 +25,12 @@ namespace ClassGame {
         //
         void RenderGame() 
         {
+            Logger::GetInstance().RenderLogger();
+            
             ImGui::DockSpaceOverViewport();
             ImGui::ShowDemoWindow();
-
+            
+            
             ImGui::Begin("ImGui Log Demo");
             ImGui::LogButtons();
 

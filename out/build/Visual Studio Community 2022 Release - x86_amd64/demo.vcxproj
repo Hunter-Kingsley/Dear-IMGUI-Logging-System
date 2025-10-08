@@ -401,6 +401,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="C:\Users\their\Documents\GitHub\Dear-IMGUI-Logging-System\Application.cpp" />
+    <ClCompile Include="C:\Users\their\Documents\GitHub\Dear-IMGUI-Logging-System\Logger.cpp" />
     <ClCompile Include="C:\Users\their\Documents\GitHub\Dear-IMGUI-Logging-System\imgui\imgui_demo.cpp" />
     <ClCompile Include="C:\Users\their\Documents\GitHub\Dear-IMGUI-Logging-System\imgui\imgui_draw.cpp" />
     <ClCompile Include="C:\Users\their\Documents\GitHub\Dear-IMGUI-Logging-System\imgui\imgui_tables.cpp" />

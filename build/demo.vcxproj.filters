@@ -4,6 +4,9 @@
     <ClCompile Include="C:\Users\their\Documents\GitHub\Dear-IMGUI-Logging-System\Application.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="C:\Users\their\Documents\GitHub\Dear-IMGUI-Logging-System\logger.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
     <ClCompile Include="C:\Users\their\Documents\GitHub\Dear-IMGUI-Logging-System\imgui\imgui_demo.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>

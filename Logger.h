@@ -20,19 +20,23 @@ struct log_info
 
 class Logger {
     public:
-        static Logger& GetInstance()
-        {
-            static Logger Logger_Instance;
-            return Logger_Instance;
-        };
+        static Logger& GetInstance() {
+            if (s_instance == nullptr) {
+                s_instance = new Logger;
+            }
+
+            return *s_instance;
+        }
         void RenderLogger();
         
-        void LogInfo();
-        void LogGameEvent();
-        void LogWarning();
-        void LogError();
+        void LogInfo(std::string);
+        void LogGameEvent(std::string);
+        void LogWarning(std::string);
+        void LogError(std::string);
     private:
+        static Logger* s_instance;
         Logger() {}
+
         std::string GetTime();
         void SendLog(log_info L);
 };
