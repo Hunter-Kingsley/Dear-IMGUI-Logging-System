@@ -1,6 +1,7 @@
 #pragma once
 
 #include <string>
+#include <list>
 #include <time.h>
 
 enum class LOG_LEVEL {
@@ -38,6 +39,6 @@ class Logger {
         Logger() {}
 
         std::string GetTime();
-        void SendLog(log_info L);
-        std::string log_bank;
+        void PublishLogs();
+        std::list<log_info> log_bank;
 };
