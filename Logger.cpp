@@ -10,7 +10,9 @@ void Logger::RenderLogger() {
     ImGui::Begin("Game Log");
 
     if(ImGui::Button("Options")) {
-        // TODO
+        ImGui::LogToFile(0, "Logs.txt");
+        ImGui::LogText("Straight up logging it");
+        ImGui::LogFinish();
     }
     ImGui::SameLine();
 
