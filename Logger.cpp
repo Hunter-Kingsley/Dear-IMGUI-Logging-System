@@ -51,7 +51,7 @@ void Logger::RenderLogger() {
 std::string Logger::GetTime() {
     time_t my_time = time(NULL);
 
-    return ctime(&my_time);
+    return "Time O'Clock";
 }
 
 void Logger::SendLog(log_info log_to_send) {
