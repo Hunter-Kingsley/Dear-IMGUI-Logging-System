@@ -39,4 +39,5 @@ class Logger {
 
         std::string GetTime();
         void SendLog(log_info L);
+        std::string log_bank;
 };

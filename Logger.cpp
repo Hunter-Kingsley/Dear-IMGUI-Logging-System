@@ -42,7 +42,7 @@ void Logger::RenderLogger() {
     ImGui::Separator();
 
     ImGui::BeginChild("Log Area");
-    ImGui::TextUnformatted("logs go here");
+    ImGui::TextUnformatted(Logger::log_bank.c_str());
     ImGui::EndChild();
 
     ImGui::End();
@@ -92,7 +92,8 @@ void Logger::SendLog(log_info log_to_send) {
 
     // add log message
     log_string += log_to_send.Message;
+    log_string += '\n';
 
     // send it with imgui
-    ImGui::LogText(log_string.c_str());
+    Logger::log_bank += log_string;
 }
