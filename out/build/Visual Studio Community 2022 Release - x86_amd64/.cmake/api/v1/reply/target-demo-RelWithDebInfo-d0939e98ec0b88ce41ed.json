@@ -2,10 +2,10 @@
 	"artifacts" : 
 	[
 		{
-			"path" : "MinSizeRel/demo.exe"
+			"path" : "RelWithDebInfo/demo.exe"
 		},
 		{
-			"path" : "MinSizeRel/demo.pdb"
+			"path" : "RelWithDebInfo/demo.pdb"
 		}
 	],
 	"backtrace" : 1,
@@ -34,7 +34,7 @@
 			{
 				"command" : 1,
 				"file" : 0,
-				"line" : 67,
+				"line" : 68,
 				"parent" : 0
 			}
 		]
@@ -45,7 +45,7 @@
 			"compileCommandFragments" : 
 			[
 				{
-					"fragment" : "/DWIN32 /D_WINDOWS /W3 /GR /EHsc /MD /O1 /Ob1 /DNDEBUG -std:c++20"
+					"fragment" : "/DWIN32 /D_WINDOWS /W3 /GR /EHsc /MD /Zi /O2 /Ob1 /DNDEBUG -std:c++20"
 				}
 			],
 			"language" : "CXX",
@@ -84,11 +84,11 @@
 		"commandFragments" : 
 		[
 			{
-				"fragment" : "/DWIN32 /D_WINDOWS /W3 /GR /EHsc /MD /O1 /Ob1 /DNDEBUG",
+				"fragment" : "/DWIN32 /D_WINDOWS /W3 /GR /EHsc /MD /Zi /O2 /Ob1 /DNDEBUG",
 				"role" : "flags"
 			},
 			{
-				"fragment" : "/machine:x64 /INCREMENTAL:NO",
+				"fragment" : "/machine:x64 /debug /INCREMENTAL",
 				"role" : "flags"
 			},
 			{
