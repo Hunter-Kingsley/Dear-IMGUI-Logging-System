@@ -42,5 +42,7 @@ class Logger {
 
         std::string GetTime();
         void PublishLogs();
+        std::string ConstructLogString(const log_info& L);
+        void SendLogToFile(log_info& LL);
         std::list<log_info> log_bank;
 };
