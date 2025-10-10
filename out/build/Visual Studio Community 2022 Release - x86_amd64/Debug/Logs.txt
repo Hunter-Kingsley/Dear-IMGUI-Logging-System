@@ -1,2 +1,39 @@
-[12:59:04.888] [ERROR] This is a test error message
-
+[14:27:41.835] [INFO] Game started successfully
+[14:27:41.836] [INFO] [GAME] Application initialized
+[14:27:41.836] [INFO] [GAME] Player made a move
+[14:27:41.836] [WARN] [GAME] Invalid move attempted
+[14:27:41.836] [ERROR] [GAME] Game state corrupted
+[14:27:43.404] [INFO] This is a test info message
+[14:27:43.834] [WARN] This is a test warning message
+[14:27:44.052] [WARN] This is a test warning message
+[14:27:44.258] [WARN] This is a test warning message
+[14:27:44.446] [WARN] This is a test warning message
+[14:27:44.628] [WARN] This is a test warning message
+[14:27:44.835] [WARN] This is a test warning message
+[14:27:45.028] [WARN] This is a test warning message
+[14:27:45.216] [WARN] This is a test warning message
+[14:27:45.380] [WARN] This is a test warning message
+[14:27:45.543] [WARN] This is a test warning message
+[14:27:46.161] [ERROR] This is a test error message
+[14:27:46.301] [ERROR] This is a test error message
+[14:27:46.458] [ERROR] This is a test error message
+[14:27:46.768] [WARN] This is a test warning message
+[14:27:46.913] [WARN] This is a test warning message
+[14:27:47.192] [INFO] This is a test info message
+[14:27:47.417] [WARN] This is a test warning message
+[14:27:47.835] [ERROR] This is a test error message
+[14:27:47.956] [ERROR] This is a test error message
+[14:27:48.169] [WARN] This is a test warning message
+[14:27:48.290] [WARN] This is a test warning message
+[14:27:48.525] [INFO] This is a test info message
+[14:27:48.786] [WARN] This is a test warning message
+[14:27:48.922] [WARN] This is a test warning message
+[14:27:49.138] [ERROR] This is a test error message
+[14:27:49.265] [ERROR] This is a test error message
+[14:27:49.902] [INFO] This is a test info message
+[14:27:50.029] [INFO] This is a test info message
+[14:27:50.253] [WARN] This is a test warning message
+[14:27:50.804] [ERROR] This is a test error message
+[14:27:50.944] [ERROR] This is a test error message
+[14:27:51.077] [ERROR] This is a test error message
+[14:27:51.381] [WARN] This is a test warning message

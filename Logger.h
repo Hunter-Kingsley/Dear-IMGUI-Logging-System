@@ -3,6 +3,7 @@
 #include <string>
 #include <list>
 #include <time.h>
+#include <fstream>
 
 enum class LOG_LEVEL {
     INFO,
@@ -38,11 +39,13 @@ class Logger {
         void LogGameError(std::string);
     private:
         static Logger* s_instance;
-        Logger() {}
+        std::ofstream LogFile;
+        Logger();
+        ~Logger();
 
         std::string GetTime();
         void PublishLogs();
         std::string ConstructLogString(const log_info& L);
-        void SendLogToFile(log_info& LL);
+        void SendLogToFile(const log_info& LL);
         std::list<log_info> log_bank;
 };

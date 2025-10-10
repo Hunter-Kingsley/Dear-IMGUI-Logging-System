@@ -59,6 +59,8 @@
         "ratio": "cpp",
         "sstream": "cpp",
         "vector": "cpp",
-        "fstream": "cpp"
+        "fstream": "cpp",
+        "algorithm": "cpp",
+        "filesystem": "cpp"
     }
 }

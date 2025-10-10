@@ -2,9 +2,16 @@
 #include "imgui/imgui.h"
 #include <iostream>
 #include <chrono>
-#include <fstream>
 
 Logger* Logger::s_instance = nullptr;
+
+Logger::Logger() {
+    LogFile.open("logs.txt");
+}
+
+Logger::~Logger() {
+    LogFile.close();
+}
 
 void Logger::RenderLogger() {
 
@@ -38,6 +45,7 @@ void Logger::RenderLogger() {
 
     ImGui::BeginChild("Log Area");
     PublishLogs();
+    ImGui::SetScrollHereY(1.0f);
     ImGui::EndChild();
 
     ImGui::End();
@@ -142,11 +150,31 @@ std::string Logger::GetTime() {
 void Logger::PublishLogs() {
 
     for (const log_info& log_to_send : log_bank) {
+        switch (log_to_send.Log_Level)
+        {
+        case LOG_LEVEL::INFO:
+            ImGui::PushStyleColor(ImGuiCol_Text, ImVec4(1.0f, 1.0f, 1.0f, 1.0f));
+            break;
+
+        case LOG_LEVEL::WARNING:
+            ImGui::PushStyleColor(ImGuiCol_Text, ImVec4(1.0f, 0.65f, 0.0f, 1.0f));
+            break;
+
+        case LOG_LEVEL::ERROR:
+            ImGui::PushStyleColor(ImGuiCol_Text, ImVec4(1.0f, 0.0f, 0.0f, 1.0f));
+            break;
+        
+        default:
+            break;
+        }
+
         ImGui::Text(ConstructLogString(log_to_send).c_str());
+
+        ImGui::PopStyleColor();
     }
 }
 
-std::string ConstructLogString(const log_info& log_to_send) {
+std::string Logger::ConstructLogString(const log_info& log_to_send) {
     std::string log_string;
     
     // add time
@@ -160,17 +188,14 @@ std::string ConstructLogString(const log_info& log_to_send) {
     {
     case LOG_LEVEL::INFO:
         log_string += "INFO";
-        ImGui::PushStyleColor(ImGuiCol_Text, ImVec4(1.0f, 1.0f, 1.0f, 1.0f));
         break;
 
     case LOG_LEVEL::WARNING:
         log_string += "WARN";
-        ImGui::PushStyleColor(ImGuiCol_Text, ImVec4(1.0f, 0.65f, 0.0f, 1.0f));
         break;
 
     case LOG_LEVEL::ERROR:
         log_string += "ERROR";
-        ImGui::PushStyleColor(ImGuiCol_Text, ImVec4(1.0f, 0.0f, 0.0f, 1.0f));
         break;
     
     default:
@@ -189,14 +214,9 @@ std::string ConstructLogString(const log_info& log_to_send) {
     log_string += log_to_send.Message;
     log_string += '\n';
 
-    ImGui::PopStyleColor();
     return log_string;
 }
 
-void Logger::SendLogToFile(log_info& logToSend) {
-    std::ofstream LogFile("logs.txt");
-
+void Logger::SendLogToFile(const log_info& logToSend) {
     LogFile << ConstructLogString(logToSend).c_str();
-
-    LogFile.close();
 }
