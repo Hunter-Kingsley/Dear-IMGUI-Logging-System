@@ -51,6 +51,10 @@ void Logger::RenderLogger() {
     ImGui::End();
 }
 
+// For the following 6 functions, I would have liked to just add a bool argument to cut the number of functions in half, but
+// I needed this to work with the pre-done code on lines 18 and 19 of Application.cpp, so I went the worse option for now.
+// In future projects I will be condensing this. 
+
 void Logger::LogInfo(std::string S) {
 
     log_info temp_log;
